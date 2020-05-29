@@ -1,11 +1,11 @@
-project_name = "heimdal-front"
+project_name = "heimdalfront"
 repo = "https://github.com/Teloggy/Heimdal-Front.git"
-repo_name = "Heimdal-Front"
+repo_name = "heimdalfront"
 
 pipelineJob (project_name){
     definition{
 	triggers{
-	    scm('H/1 * * * *')
+	    scm('* * * * *')
 	}
 	cpsScm{
 	    scm{
@@ -14,7 +14,7 @@ pipelineJob (project_name){
 			name(repo_name)
 			url(repo)
 			refspec(null)
-		        credentials('yahergitteloggy')
+		        credentials('yaher-teloggy-easy')
 		    }
 		    branches('master')		    
                 }
