@@ -5,7 +5,7 @@ repo_name = "heimdalfront"
 pipelineJob (project_name){
     definition{
 	triggers{
-	    scm('* * * * *')
+	    scm('0 */2 * * *')
 	}
 	cpsScm{
 	    scm{
