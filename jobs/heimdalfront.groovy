@@ -1,6 +1,6 @@
-project_name = "heimdalfront"
+project_name = "heimdalfront-psicoguia"
 repo = "https://github.com/Teloggy/Heimdal-Front.git"
-repo_name = "heimdalfront"
+repo_name = "heimdalfront-psicoguia"
 
 pipelineJob (project_name){
     definition{
