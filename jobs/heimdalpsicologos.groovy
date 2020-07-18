@@ -16,7 +16,7 @@ pipelineJob (project_name){
 			refspec(null)
 		        credentials('yaher-teloggy-easy')
 		    }
-		    branches('master')		    
+		    branches('develop')		    
                 }
 		scriptPath("Jenkinsfile")
 	    }
