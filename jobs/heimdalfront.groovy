@@ -11,13 +11,13 @@ pipelineJob (project_name){
 	    scm{
 		git{    		    
 		    remote{
-			name(repo_name)
-			url(repo)
-			refspec(null)
-		        credentials('yaher-teloggy-easy')
+				name(repo_name)
+				url(repo)
+				refspec(null)
+					credentials('yaher-teloggy-easy')
 		    }
 		    branches('master')		    
-                }
+		}
 		scriptPath("Jenkinsfile")
 	    }
 	}
@@ -25,6 +25,9 @@ pipelineJob (project_name){
 	post {
 		failure {
 			echo "Failed stage name: ${FAILED_STAGE}"
+		}
+		success {
+			echo "EXITOSO TELOGGY"
 		}
 	}
 		
