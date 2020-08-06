@@ -3,6 +3,7 @@ repo = "https://github.com/Teloggy/Heimdal-Front.git"
 repo_name = "heimdalfront-psicoguia"
 
 pipelineJob (project_name){
+	agent any
     definition{
 		triggers{
 			scm('0 */2 * * *')
@@ -22,4 +23,10 @@ pipelineJob (project_name){
 			}
 		}
     }
+	post {
+		always {
+			echo "Pipeline result: ${currentBuild.result}"
+			echo "Pipeline currentResult: ${currentBuild.currentResult}"
+		}
+	}
 }
