@@ -2,7 +2,7 @@ project_name = "heimdalfront-psicoguia"
 repo = "https://github.com/Teloggy/Heimdal-Front.git"
 repo_name = "heimdalfront-psicoguia"
 
-pipeline (project_name){
+pipelineJob (project_name){
     definition{
 		triggers{
 			scm('0 */2 * * *')
@@ -22,10 +22,4 @@ pipeline (project_name){
 			}
 		}
     }
-	post {
-		always {
-			echo "Pipeline result: ${currentBuild.result}"
-			echo "Pipeline currentResult: ${currentBuild.currentResult}"
-		}
-	}
 }
