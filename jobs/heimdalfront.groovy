@@ -21,5 +21,12 @@ pipelineJob (project_name){
 		scriptPath("Jenkinsfile")
 	    }
 	}
+
+	post {
+		failure {
+			echo "Failed stage name: ${FAILED_STAGE}"
+		}
+	}
+		
     }
 }
