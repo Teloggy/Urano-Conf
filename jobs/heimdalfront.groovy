@@ -23,8 +23,8 @@ pipelineJob (project_name){
 	}
 
 	post {
-		always {
-			echo "Post-Build result: teloggy"
+		failure {
+			echo "Failed stage name: ${FAILED_STAGE}"
 		}
 	}
 		
