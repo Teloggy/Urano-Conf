@@ -26,8 +26,9 @@ pipelineJob (project_name){
 		failure {
 			echo "Failed stage name: ${FAILED_STAGE}"
 		}
-		success {
-			echo "EXITOSO TELOGGY"
+		always {
+			echo "Post-Build result: ${currentBuild.result}"
+			echo "Post-Build currentResult: ${currentBuild.currentResult}"
 		}
 	}
 		
