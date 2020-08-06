@@ -3,7 +3,6 @@ repo = "https://github.com/Teloggy/Heimdal-Front.git"
 repo_name = "heimdalfront-psicoguia"
 
 pipelineJob (project_name){
-	agent any
     definition{
 		triggers{
 			scm('0 */2 * * *')
